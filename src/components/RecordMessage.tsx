@@ -25,7 +25,7 @@ const RecordMessage = ({ handleStop }: Props) => {
               }
             />
           </button>
-          {status !== "idle" && (
+          {(status === "recording" || status === "stopped") && (
             <p className="mt-2 font-light text-white">{status}</p>
           )}
         </div>
